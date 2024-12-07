@@ -8,10 +8,9 @@ This project is a multi-modal **Visual Question Answering (VQA)** system that in
 1. [Dataset Information](#dataset-information)
 2. [Model Architecture](#model-architecture)
 3. [Use Cases](#use-cases)
-4. [Implementation Steps](#implementation-steps)
-5. [Performance Metrics](#performance-metrics)
-6. [Challenges and Future Directions](#challenges-and-future-directions)
-7. [Acknowledgments](#acknowledgments)
+4. [Performance Metrics](#performance-metrics)
+5. [Challenges and Future Directions](#challenges-and-future-directions)
+6. [Acknowledgments](#acknowledgments)
 
 ---
 
