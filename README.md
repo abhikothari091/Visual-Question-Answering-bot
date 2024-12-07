@@ -1,5 +1,6 @@
 # Visual Question Answering Bot
 
+**Team members: Abhishek Kothari, Vignesh Ramaswamy Balasundaram, Yaksh Shah**
 This project is a multi-modal **Visual Question Answering (VQA)** system that interprets images and answers questions about them. By leveraging computer vision and natural language processing techniques, the model combines visual and textual understanding to provide meaningful responses. The core architecture integrates ResNet-50 for image feature extraction, BERT for text embeddings, and an attention fusion layer to merge both modalities.
 
 ---
