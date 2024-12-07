@@ -16,7 +16,7 @@ This project is a multi-modal **Visual Question Answering (VQA)** system that in
 
 ## Dataset Information
 
-We use the **VQA v2 dataset**, a widely recognized benchmark for Visual Question Answering tasks. The dataset includes images from MS COCO and questions with corresponding answers, curated to evaluate a model's reasoning capabilities.
+We use the **VQA v2 dataset**, a widely recognized benchmark for Visual Question Answering tasks. The dataset includes images from MS COCO and questions with corresponding answers, curated to evaluate a model's reasoning capabilities.The dataset used in this project can be downloaded from this [link](https://visualqa.org/vqa_v1_download.html)
 
 ### Preprocessing
 - **Data Loader**:
@@ -46,10 +46,6 @@ We use the **VQA v2 dataset**, a widely recognized benchmark for Visual Question
   1. **Stacking**: Simple concatenation of image and text features.
   2. **Cross Attention**: Mutual interaction between image and text features to amplify shared information.
   3. **Skip Connections**: Residual connections added to preserve the original features and prevent bottlenecks. This approach yielded the best accuracy.
-
-#### Model Pipeline
-Below is a high-level diagram illustrating the architecture:  
-*(Replace this line with a markdown image link to your diagram.)*
 
 ---
 
