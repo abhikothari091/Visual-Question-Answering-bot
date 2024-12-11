@@ -10,8 +10,10 @@ This project is a multi-modal **Visual Question Answering (VQA)** system that in
 2. [Model Architecture](#model-architecture)
 3. [Use Cases](#use-cases)
 4. [Performance Metrics](#performance-metrics)
-5. [Challenges and Future Directions](#challenges-and-future-directions)
-6. [Acknowledgments](#acknowledgments)
+5. [Limitations of the Model](#limitations-of-the-model)
+6. [Challenges and Future Directions](#challenges-and-future-directions)
+7. [Lessons and Insights](#lessons-and-insights)
+8. [Acknowledgments](#acknowledgments)
 
 ---
 
@@ -75,6 +77,22 @@ The model achieved a **validation accuracy of 61%**, evaluated on the top 1,000 
 
 ---
 
+## Limitations of the Model
+
+1. **Restricted Answer Space**:  
+   The model is limited to a predefined set of 1,000 possible answers. If the correct answer is not included in this set, the model will predict an unrelated or incorrect answer.  
+   **Example:**  
+   - **User Question:** What is the color of the t-shirt the person is wearing in the image ?  
+   - **True Answer:** Pink  
+   - **Predicted Answer:** Black (if "Pink" is not part of the predefined answer set).  
+
+2. **Single-Word Responses**:  
+   Currently, the model is designed to provide only one-word answers, which restricts its ability to handle complex or descriptive queries.  
+
+These limitations highlight the need for further development to expand the answer set and support more expressive responses.
+
+
+---
 ## Challenges and Future Directions
 
 ### Challenges
@@ -90,6 +108,30 @@ The model achieved a **validation accuracy of 61%**, evaluated on the top 1,000 
    - Experiment with adaptive attention layers for better feature alignment.
 3. **Data Augmentation**:
    - Introduce synthetic data to improve model robustness and performance on rare questions.
+
+---
+## Lessons and Insights
+
+1. **Importance of Answer Set Design**:  
+   - Defining the answer space is critical for the accuracy of a Visual Question Answering (VQA) model. A limited or incomplete answer set can lead to incorrect predictions even when the model processes inputs correctly.  
+   - Future implementations should consider dynamically expanding the answer set or leveraging open vocabulary approaches to enhance flexibility.  
+
+2. **Multimodal Learning Challenges**:  
+   - Combining text and image features requires careful alignment and integration. Multihead Attention proved effective, but fine-tuning the interaction between these modalities remains complex and impactful on performance.  
+
+3. **Trade-offs in Model Simplicity**:  
+   - Limiting responses to one-word answers simplifies the output space but restricts the model's applicability for nuanced or detailed queries. Supporting multi-word answers could unlock broader use cases but adds complexity to training and evaluation.  
+
+4. **Pretrained Model Advantages**:  
+   - Leveraging BERT for text encoding and ResNet-50 for image feature extraction significantly accelerated development while ensuring robust performance for their respective tasks.  
+
+5. **Error Analysis and Improvement Scope**:  
+   - Error analysis revealed the need to handle out-of-vocabulary answers and edge cases where the correct answer is unavailable. These insights emphasize the importance of iterative improvements and dynamic testing methods in VQA systems.  
+
+6. **Application Potential**:  
+   - This project demonstrated the practical applications of multimodal deep learning in areas such as interactive systems, image-based search, and AI-driven assistance, paving the way for real-world deployment with further refinements.  
+
+By addressing these lessons, the project can evolve into a more flexible and accurate solution, better equipped to meet diverse user needs.
 
 ---
 
